@@ -7,11 +7,11 @@ package imagescollage.model
 	 * Main model of application.
 	 * @author Andriy
 	 */
-	public class ImageModel extends Actor implements IImageModel
+	public class ImagesCollageModel extends Actor implements IImagesCollageModel
 	{
 		private var _canvasForScreen:Sprite;
 		
-		public function ImageModel() { }
+		public function ImagesCollageModel() { }
 		
 		//--------------------------------------------------------------------------
 		//

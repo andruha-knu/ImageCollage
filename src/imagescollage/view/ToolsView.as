@@ -29,7 +29,8 @@ package imagescollage.view
 		//--------------------------------------------------------------------------
 		
 		/** 
-		 * Return template of view 
+		 * Return template of view. 
+		 * @return Sprite
 		 */
 		public function get template():Sprite
 		{
@@ -37,7 +38,10 @@ package imagescollage.view
 		}	
 
 		/** 
-		 * Set properties to template components
+		 * Set properties to template components.
+		 * @param name - name of display object
+		 * @param property - property  of display object
+		 * @param value - property value of display object 
 		 */
 		public function setProperty(name:String, property:String, value:*):void
 		{

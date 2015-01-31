@@ -4,7 +4,7 @@ package imagescollage
 	import imagescollage.controller.LoadImageCommand;
 	import imagescollage.controller.SaveImageCommand;
 	import imagescollage.event.ImagesCollageEvent;
-	import imagescollage.model.ImageModel;
+	import imagescollage.model.ImagesCollageModel;
 	import imagescollage.view.ImagesAreaMediator;
 	import imagescollage.view.ImagesAreaView;
 	import imagescollage.view.ContainerView;
@@ -41,7 +41,7 @@ package imagescollage
 			commandMap.mapEvent(ImagesCollageEvent.IMAGE_ADD, LoadImageCommand, ImagesCollageEvent);
 			commandMap.mapEvent(ImagesCollageEvent.IMAGE_SAVE, SaveImageCommand, ImagesCollageEvent);
 			
-			injector.mapSingleton(ImageModel);
+			injector.mapSingleton(ImagesCollageModel);
 			
 			mediatorMap.mapView(ToolsView, ToolsMediator);
 			mediatorMap.mapView(ImagesAreaView, ImagesAreaMediator);

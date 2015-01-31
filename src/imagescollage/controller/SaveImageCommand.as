@@ -11,7 +11,7 @@ package imagescollage.controller
 	import flash.net.FileFilter;
 	import flash.net.FileReference;
 	import flash.utils.ByteArray;
-	import imagescollage.model.ImageModel;
+	import imagescollage.model.ImagesCollageModel;
 	import imagescollage.utils.PNGEncoder;
 	import org.robotlegs.mvcs.Command;
 	import imagescollage.view.ContainerView;
@@ -26,7 +26,7 @@ package imagescollage.controller
 	public class SaveImageCommand extends Command
 	{	
 		[Inject]
-		public var imageModel:ImageModel;
+		public var imageModel:ImagesCollageModel;
 
 		private var _fileReference:FileReference;
 		

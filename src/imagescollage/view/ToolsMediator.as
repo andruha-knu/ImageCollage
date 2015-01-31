@@ -3,7 +3,7 @@ package imagescollage.view
 	import imagescollage.event.ImagesCollageEvent;
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
-	import imagescollage.model.ImageModel;
+	import imagescollage.model.ImagesCollageModel;
 	import flash.events.MouseEvent;
 	import org.robotlegs.mvcs.Mediator;
 	
@@ -65,7 +65,7 @@ package imagescollage.view
 		}		
 		
 		/**
-		 * Handler for view template events
+		 * Handler for view template events.
 		 * @param event - MouseEvent
 		 */
 		private function onClick(event:MouseEvent):void 

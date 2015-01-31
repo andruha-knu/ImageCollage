@@ -6,7 +6,7 @@ package imagescollage.model
 	 * ...
 	 * @author Andriy
 	 */
-	public interface IImageModel 
+	public interface IImagesCollageModel 
 	{
 		function get canvasForScreen():Sprite;
 		function set canvasForScreen(value:Sprite):void;

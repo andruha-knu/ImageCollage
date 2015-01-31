@@ -38,6 +38,7 @@ package imagescollage.view
 		
 		/** 
 		 * Return template of view.
+		 * @return Sprite
 		 */
 		public function get template():Sprite
 		{

@@ -2,7 +2,7 @@ package imagescollage.controller
 {
 	import imagescollage.event.ImagesCollageEvent;
 	import imagescollage.factory.ViewFactory;
-	import imagescollage.model.ImageModel;
+	import imagescollage.model.ImagesCollageModel;
 	import imagescollage.view.ContainerView;
 	import org.robotlegs.mvcs.Command;
 	import imagescollage.view.ImagesAreaView;
@@ -15,7 +15,7 @@ package imagescollage.controller
 	public class CreateMainViewCommand extends Command
 	{
 		[Inject]
-		public var imageModel:ImageModel;
+		public var imageModel:ImagesCollageModel;
 
 		public function CreateMainViewCommand() { }
 		

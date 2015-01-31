@@ -6,7 +6,7 @@ package imagescollage.view
 	import flash.display.DisplayObject;
 	import flash.display.SimpleButton;
 	import flash.display.Sprite;
-	import imagescollage.model.ImageModel;
+	import imagescollage.model.ImagesCollageModel;
 	import flash.events.MouseEvent;
 	import org.robotlegs.mvcs.Mediator;
 	import flash.display.Shape;
@@ -21,7 +21,7 @@ package imagescollage.view
 		public var imagesAreaView:ImagesAreaView;
 
 		[Inject]
-		public var imageModel:ImageModel;		
+		public var imageModel:ImagesCollageModel;		
 		
 		/** Keep track of the current tool being used. */
 		private var _imageTransformTool:TransformTool;
