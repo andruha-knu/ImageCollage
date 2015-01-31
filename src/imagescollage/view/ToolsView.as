@@ -40,7 +40,7 @@ package imagescollage.view
 		/** 
 		 * Set properties to template components.
 		 * @param name - name of display object
-		 * @param property - property  of display object
+		 * @param property - property name of display object
 		 * @param value - property value of display object 
 		 */
 		public function setProperty(name:String, property:String, value:*):void
