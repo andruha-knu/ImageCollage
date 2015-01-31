@@ -1,6 +1,6 @@
-package controller 
+package imagescollage.controller 
 {
-	import events.ImagesCollageEvent;
+	import imagescollage.event.ImagesCollageEvent;
 	import flash.display.BitmapData;
 	import flash.display.Loader;
 	import flash.display.MovieClip;
@@ -11,12 +11,12 @@ package controller
 	import flash.net.FileFilter;
 	import flash.net.FileReference;
 	import flash.utils.ByteArray;
-	import model.ImageModel;
+	import imagescollage.model.ImageModel;
+	import imagescollage.utils.PNGEncoder;
 	import org.robotlegs.mvcs.Command;
-	import utils.PNGEncoder;
-	import view.ContainerView;
-	import view.ImagesAreaView;
-	import view.ToolsView;
+	import imagescollage.view.ContainerView;
+	import imagescollage.view.ImagesAreaView;
+	import imagescollage.view.ToolsView;
 	
 	/**
 	 * Try to save you current image collage local on device.

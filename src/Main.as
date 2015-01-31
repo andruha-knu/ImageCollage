@@ -1,6 +1,6 @@
 package 
 {
-	import context.ImagesCollageContext;
+	import imagescollage.ImagesCollageContext;
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageQuality;

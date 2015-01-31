@@ -1,4 +1,4 @@
-package view
+package imagescollage.view
 {
 	import flash.display.MovieClip;
 	import flash.display.Sprite;

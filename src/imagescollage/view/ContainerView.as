@@ -1,7 +1,7 @@
-package view
+package imagescollage.view
 {
-	import constants.ViewConst;
-	import factory.ViewFactory;
+	import imagescollage.constants.ViewConst;
+	import imagescollage.factory.ViewFactory;
 	import flash.display.Bitmap;
 	import flash.display.Sprite;
 	import flash.display.Stage;

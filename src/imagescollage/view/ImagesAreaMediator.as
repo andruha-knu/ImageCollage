@@ -1,12 +1,12 @@
-package view 
+package imagescollage.view 
 {
 	import com.greensock.TweenMax;
 	import com.senocular.display.TransformTool;
-	import events.ImagesCollageEvent;
+	import imagescollage.event.ImagesCollageEvent;
 	import flash.display.DisplayObject;
 	import flash.display.SimpleButton;
 	import flash.display.Sprite;
-	import model.ImageModel;
+	import imagescollage.model.ImageModel;
 	import flash.events.MouseEvent;
 	import org.robotlegs.mvcs.Mediator;
 	import flash.display.Shape;
@@ -131,14 +131,14 @@ package view
 		 * Selecting objects on the screen.
 		 * @param event - MouseEvent
 		 */ 
-		private function select(event:MouseEvent):void 
+		private function select(even:MouseEvent):void 
 		{
-			if (imagesAreaView.contains(event.target as DisplayObject)) 
+			if (imagesAreaView.contains(even.target as DisplayObject)) 
 			{
-				_imageTransformTool.target = event.target as Sprite;
+				_imageTransformTool.target = even.target as Sprite;
 				eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_SELECT));			
 			}
-			else if(!(event.target is SimpleButton)) 
+			else if(!(even.target is SimpleButton)) 
 			{
 				_imageTransformTool.target = null;
 				eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_NONE));

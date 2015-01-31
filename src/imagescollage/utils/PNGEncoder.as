@@ -1,4 +1,4 @@
-package utils
+package imagescollage.utils
 {
         import flash.geom.*;
         import flash.display.Bitmap;

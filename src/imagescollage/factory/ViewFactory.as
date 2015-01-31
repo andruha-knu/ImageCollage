@@ -1,4 +1,4 @@
-package factory 
+package imagescollage.factory 
 {
 	import flash.display.MovieClip;
 	import flash.display.Sprite;

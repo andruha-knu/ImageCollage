@@ -1,12 +1,12 @@
-package controller 
+package imagescollage.controller 
 {
-	import events.ImagesCollageEvent;
-	import factory.ViewFactory;
-	import model.ImageModel;
+	import imagescollage.event.ImagesCollageEvent;
+	import imagescollage.factory.ViewFactory;
+	import imagescollage.model.ImageModel;
+	import imagescollage.view.ContainerView;
 	import org.robotlegs.mvcs.Command;
-	import view.ContainerView;
-	import view.ImagesAreaView;
-	import view.ToolsView;
+	import imagescollage.view.ImagesAreaView;
+	import imagescollage.view.ToolsView;
 	
 	/**
 	 * Create main view and all components.

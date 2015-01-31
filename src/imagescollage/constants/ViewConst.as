@@ -1,4 +1,4 @@
-package constants 
+package imagescollage.constants 
 {
 	
 	/**

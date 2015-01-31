@@ -1,4 +1,4 @@
-package model 
+package imagescollage.model 
 {
 	import flash.display.Sprite;
 	import org.robotlegs.mvcs.Actor;

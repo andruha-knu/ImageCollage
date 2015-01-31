@@ -1,4 +1,4 @@
-package events
+package imagescollage.event
 {
 	import flash.events.Event;
 	

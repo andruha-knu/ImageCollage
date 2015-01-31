@@ -1,6 +1,6 @@
-package controller 
+package imagescollage.controller 
 {
-	import events.ImagesCollageEvent;
+	import imagescollage.event.ImagesCollageEvent;
 	import flash.display.Bitmap;
 	import flash.display.Loader;
 	import flash.display.Sprite;
@@ -10,9 +10,9 @@ package controller
 	import flash.net.FileFilter;
 	import flash.net.FileReference;
 	import org.robotlegs.mvcs.Command;
-	import view.ContainerView;
-	import view.ImagesAreaView;
-	import view.ToolsView;
+	import imagescollage.view.ContainerView;
+	import imagescollage.view.ImagesAreaView;
+	import imagescollage.view.ToolsView;
 	
 	/**
 	 * Try to load image to our application.

@@ -16,7 +16,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'1/30/2015'</value>
+      <value>'1/31/2015'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -32,19 +32,13 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>C:\Root\work\as3\ImagesCollage\src</path-element>
+      <path-element>C:\Root\GitHub\ImagesCollage\src</path-element>
+      <path-element>C:\Root\GitHub\ImagesCollage\lib</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
-    <include-libraries>
-      <library>C:\Root\work\as3\ImagesCollage\lib\gui.swc</library>
-    </include-libraries>
-    <library-path append="true">
-      <path-element>C:\Root\work\as3\ImagesCollage\lib\robotlegs-framework-v1.5.2.swc</path-element>
-      <path-element>C:\Root\work\as3\ImagesCollage\lib\greensock.swc</path-element>
-    </library-path>
   </compiler>
   <file-specs>
-    <path-element>C:\Root\work\as3\ImagesCollage\src\Main.as</path-element>
+    <path-element>C:\Root\GitHub\ImagesCollage\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#FFF9E1</default-background-color>
   <default-frame-rate>30</default-frame-rate>

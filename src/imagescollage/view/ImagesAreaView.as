@@ -1,4 +1,4 @@
-package view
+package imagescollage.view
 {
 	import flash.display.Bitmap;
 	import flash.display.Shape;

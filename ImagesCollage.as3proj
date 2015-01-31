@@ -17,6 +17,7 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src" />
+    <class path="lib" />
   </classpaths>
   <!-- Build options -->
   <build>
@@ -43,18 +44,19 @@
     <option linkReport="" />
     <option loadExterns="" />
     <option staticLinkRSL="True" />
-    <option additional="" />
+    <option additional="--keep-as3-metadata+=TypeHint,EditorData,Embed" />
     <option compilerConstants="" />
     <option minorVersion="" />
   </build>
   <!-- SWC Include Libraries -->
   <includeLibraries>
-    <element path="lib\gui.swc" />
+    <!-- example: <element path="..." /> -->
   </includeLibraries>
   <!-- SWC Libraries -->
   <libraryPaths>
-    <element path="lib\robotlegs-framework-v1.5.2.swc" />
     <element path="lib\greensock.swc" />
+    <element path="lib\gui.swc" />
+    <element path="lib\robotlegs-framework-v1.5.2.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

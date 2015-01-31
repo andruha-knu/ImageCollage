@@ -1,9 +1,9 @@
-package view 
+package imagescollage.view 
 {
-	import events.ImagesCollageEvent;
+	import imagescollage.event.ImagesCollageEvent;
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
-	import model.ImageModel;
+	import imagescollage.model.ImageModel;
 	import flash.events.MouseEvent;
 	import org.robotlegs.mvcs.Mediator;
 	
@@ -45,9 +45,9 @@ package view
 		 * Handler for notifications from the system.
 		 * @param event - ImagesCollageEvent
 		 */
-		private function action(event:ImagesCollageEvent):void 
+		private function action(even:ImagesCollageEvent):void 
 		{
-			switch (event.type) 
+			switch (even.type) 
 			{
 				case ImagesCollageEvent.IMAGE_SELECT: 
 				{

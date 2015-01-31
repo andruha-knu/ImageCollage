@@ -1,18 +1,18 @@
-package context  
+package imagescollage  
 {
-	import controller.CreateMainViewCommand;
-	import controller.LoadImageCommand;
-	import controller.SaveImageCommand;
-	import events.ImagesCollageEvent;
-	import model.ImageModel;
-	import view.ImagesAreaMediator;
-	import view.ImagesAreaView;
-	import view.ContainerView;
+	import imagescollage.controller.CreateMainViewCommand;
+	import imagescollage.controller.LoadImageCommand;
+	import imagescollage.controller.SaveImageCommand;
+	import imagescollage.event.ImagesCollageEvent;
+	import imagescollage.model.ImageModel;
+	import imagescollage.view.ImagesAreaMediator;
+	import imagescollage.view.ImagesAreaView;
+	import imagescollage.view.ContainerView;
 	import flash.display.DisplayObjectContainer;
 	import org.robotlegs.base.ContextEvent;
 	import org.robotlegs.mvcs.Context;
-	import view.ToolsMediator;
-	import view.ToolsView;
+	import imagescollage.view.ToolsMediator;
+	import imagescollage.view.ToolsView;
 	
 	/**
 	 * Main context of application.
