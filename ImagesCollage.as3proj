@@ -44,7 +44,7 @@
     <option linkReport="" />
     <option loadExterns="" />
     <option staticLinkRSL="True" />
-    <option additional="--keep-as3-metadata+=TypeHint,EditorData,Embed" />
+    <option additional="-keep-as3-metadata+=Inject -keep-as3-metadata+=PostConstruct" />
     <option compilerConstants="" />
     <option minorVersion="" />
   </build>
@@ -57,6 +57,7 @@
     <element path="lib\greensock.swc" />
     <element path="lib\gui.swc" />
     <element path="lib\robotlegs-framework-v1.5.2.swc" />
+    <element path="lib\SwiftSuspenders-v1.6.0.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

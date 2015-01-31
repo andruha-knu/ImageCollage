@@ -54,7 +54,9 @@ package imagescollage.controller
 		 * @param canvas - some <b>Sprite</b> instance we want to make a screenshot
 		 */
         public function saveImagesCollage(canvas:Sprite):void {
-            var bitmapData:BitmapData = new BitmapData(canvas.width, canvas.height);
+            eventDispatcher.dispatchEvent(new ImageEvent(ImageEvent.IMAGE_UNSELECT));
+			
+			var bitmapData:BitmapData = new BitmapData(canvas.width, canvas.height);
 			bitmapData.draw(canvas);  
 
 			var byteArray:ByteArray = PNGEncoder.encode(bitmapData);

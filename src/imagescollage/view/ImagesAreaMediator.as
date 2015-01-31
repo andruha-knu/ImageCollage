@@ -40,7 +40,7 @@ package imagescollage.view
 			
 			eventMap.mapListener(eventDispatcher, ImageEvent.IMAGE_ADD_COMPLETE, action);
 			eventMap.mapListener(eventDispatcher, ImageEvent.IMAGE_DELETE, action);
-			eventMap.mapListener(eventDispatcher, ImageEvent.IMAGE_SAVE, action);
+			eventMap.mapListener(eventDispatcher, ImageEvent.IMAGE_UNSELECT, action);
 		}
 
 		//--------------------------------------------------------------------------
@@ -88,7 +88,7 @@ package imagescollage.view
 					}
 					break;	
 				}
-				case ImageEvent.IMAGE_SAVE: 
+				case ImageEvent.IMAGE_UNSELECT: 
 				{
 					_imageTransformTool.target = null;
 					break;

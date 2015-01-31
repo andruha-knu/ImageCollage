@@ -17,6 +17,7 @@ package imagescollage.event
 		public static const IMAGE_SAVE_CANCEL:String = "imageSaveCancel";
 		
 		public static const IMAGE_SELECT:String = "imageSelect";
+		public static const IMAGE_UNSELECT:String = "imageUnselect";
 		public static const IMAGE_NONE:String = "imageNone";
 		
 		public static const IMAGE_DELETE:String = "imageDelete";

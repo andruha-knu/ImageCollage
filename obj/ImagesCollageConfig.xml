@@ -40,6 +40,7 @@
       <path-element>C:\Root\GitHub\ImagesCollage\lib\greensock.swc</path-element>
       <path-element>C:\Root\GitHub\ImagesCollage\lib\gui.swc</path-element>
       <path-element>C:\Root\GitHub\ImagesCollage\lib\robotlegs-framework-v1.5.2.swc</path-element>
+      <path-element>C:\Root\GitHub\ImagesCollage\lib\SwiftSuspenders-v1.6.0.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
