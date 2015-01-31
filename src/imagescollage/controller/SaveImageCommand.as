@@ -1,6 +1,6 @@
 package imagescollage.controller 
 {
-	import imagescollage.event.ImagesCollageEvent;
+	import imagescollage.event.ImageEvent;
 	import flash.display.BitmapData;
 	import flash.display.Loader;
 	import flash.display.MovieClip;

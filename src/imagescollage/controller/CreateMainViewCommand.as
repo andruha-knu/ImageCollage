@@ -1,6 +1,7 @@
 package imagescollage.controller 
 {
-	import imagescollage.event.ImagesCollageEvent;
+	import imagescollage.event.ImageEvent;
+	import imagescollage.event.SystemEvent;
 	import imagescollage.factory.ViewFactory;
 	import imagescollage.model.ImagesCollageModel;
 	import imagescollage.view.ContainerView;
@@ -41,7 +42,7 @@ package imagescollage.controller
 			
 			imageModel.canvasForScreen = imagesAreaView;
 			
-			eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.MAIN_VIEW_CREATED_COMPLETE));
+			eventDispatcher.dispatchEvent(new ImageEvent(SystemEvent.MAIN_VIEW_CREATED_COMPLETE));
 		}
 				
 	}

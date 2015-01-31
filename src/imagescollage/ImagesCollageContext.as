@@ -3,7 +3,7 @@ package imagescollage
 	import imagescollage.controller.CreateMainViewCommand;
 	import imagescollage.controller.LoadImageCommand;
 	import imagescollage.controller.SaveImageCommand;
-	import imagescollage.event.ImagesCollageEvent;
+	import imagescollage.event.ImageEvent;
 	import imagescollage.model.ImagesCollageModel;
 	import imagescollage.view.ImagesAreaMediator;
 	import imagescollage.view.ImagesAreaView;
@@ -38,8 +38,8 @@ package imagescollage
 		override public function startup():void
 		{
 			commandMap.mapEvent(ContextEvent.STARTUP_COMPLETE, CreateMainViewCommand, ContextEvent, true);
-			commandMap.mapEvent(ImagesCollageEvent.IMAGE_ADD, LoadImageCommand, ImagesCollageEvent);
-			commandMap.mapEvent(ImagesCollageEvent.IMAGE_SAVE, SaveImageCommand, ImagesCollageEvent);
+			commandMap.mapEvent(ImageEvent.IMAGE_ADD, LoadImageCommand, ImageEvent);
+			commandMap.mapEvent(ImageEvent.IMAGE_SAVE, SaveImageCommand, ImageEvent);
 			
 			injector.mapSingleton(ImagesCollageModel);
 			

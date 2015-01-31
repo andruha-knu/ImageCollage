@@ -2,7 +2,7 @@ package imagescollage.view
 {
 	import com.greensock.TweenMax;
 	import com.senocular.display.TransformTool;
-	import imagescollage.event.ImagesCollageEvent;
+	import imagescollage.event.ImageEvent;
 	import flash.display.DisplayObject;
 	import flash.display.SimpleButton;
 	import flash.display.Sprite;
@@ -38,9 +38,9 @@ package imagescollage.view
 		{
 			initTransformTool();
 			
-			eventMap.mapListener(eventDispatcher, ImagesCollageEvent.IMAGE_ADD_COMPLETE, action);
-			eventMap.mapListener(eventDispatcher, ImagesCollageEvent.IMAGE_DELETE, action);
-			eventMap.mapListener(eventDispatcher, ImagesCollageEvent.IMAGE_SAVE, action);
+			eventMap.mapListener(eventDispatcher, ImageEvent.IMAGE_ADD_COMPLETE, action);
+			eventMap.mapListener(eventDispatcher, ImageEvent.IMAGE_DELETE, action);
+			eventMap.mapListener(eventDispatcher, ImageEvent.IMAGE_SAVE, action);
 		}
 
 		//--------------------------------------------------------------------------
@@ -53,13 +53,13 @@ package imagescollage.view
 		 * Handler for notifications from the system.
 		 * @param event - ImagesCollageEvent
 		 */
-		private function action(event:ImagesCollageEvent):void 
+		private function action(event:ImageEvent):void 
 		{
 			var spr:Sprite;
 			
 			switch (event.type) 
 			{
-				case ImagesCollageEvent.IMAGE_ADD_COMPLETE: 
+				case ImageEvent.IMAGE_ADD_COMPLETE: 
 				{
 					_imageTransformTool.target = null;
 					
@@ -73,7 +73,7 @@ package imagescollage.view
 					
 					break;
 				}
-				case ImagesCollageEvent.IMAGE_DELETE: 
+				case ImageEvent.IMAGE_DELETE: 
 				{
 					if (_imageTransformTool.target && imagesAreaView.contains(_imageTransformTool.target))
 					{
@@ -82,13 +82,13 @@ package imagescollage.view
 						
 						_imageTransformTool.target = null;
 						
-						eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_NONE));
+						eventDispatcher.dispatchEvent(new ImageEvent(ImageEvent.IMAGE_NONE));
 						
 						TweenMax.to(spr, 1, {alpha:0, onComplete:deleteImageComplete, onCompleteParams:[spr]});					
 					}
 					break;	
 				}
-				case ImagesCollageEvent.IMAGE_SAVE: 
+				case ImageEvent.IMAGE_SAVE: 
 				{
 					_imageTransformTool.target = null;
 					break;
@@ -136,12 +136,12 @@ package imagescollage.view
 			if (imagesAreaView.contains(even.target as DisplayObject)) 
 			{
 				_imageTransformTool.target = even.target as Sprite;
-				eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_SELECT));			
+				eventDispatcher.dispatchEvent(new ImageEvent(ImageEvent.IMAGE_SELECT));			
 			}
 			else if(!(even.target is SimpleButton)) 
 			{
 				_imageTransformTool.target = null;
-				eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_NONE));
+				eventDispatcher.dispatchEvent(new ImageEvent(ImageEvent.IMAGE_NONE));
 			}
 		}
 		

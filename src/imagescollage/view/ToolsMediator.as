@@ -1,6 +1,6 @@
 package imagescollage.view 
 {
-	import imagescollage.event.ImagesCollageEvent;
+	import imagescollage.event.ImageEvent;
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;
 	import imagescollage.model.ImagesCollageModel;
@@ -31,8 +31,8 @@ package imagescollage.view
 			
 			eventMap.mapListener(toolsView, MouseEvent.CLICK, onClick);
 			
-			eventMap.mapListener(eventDispatcher, ImagesCollageEvent.IMAGE_SELECT, action);
-			eventMap.mapListener(eventDispatcher, ImagesCollageEvent.IMAGE_NONE, action);
+			eventMap.mapListener(eventDispatcher, ImageEvent.IMAGE_SELECT, action);
+			eventMap.mapListener(eventDispatcher, ImageEvent.IMAGE_NONE, action);
 		}
 
 		//--------------------------------------------------------------------------
@@ -45,17 +45,17 @@ package imagescollage.view
 		 * Handler for notifications from the system.
 		 * @param event - ImagesCollageEvent
 		 */
-		private function action(even:ImagesCollageEvent):void 
+		private function action(even:ImageEvent):void 
 		{
 			switch (even.type) 
 			{
-				case ImagesCollageEvent.IMAGE_SELECT: 
+				case ImageEvent.IMAGE_SELECT: 
 				{
 					toolsView.setProperty(ToolsView.BTN_DELETE_IMAGE, 'enabled', true);
 					toolsView.setProperty(ToolsView.BTN_DELETE_IMAGE, 'alpha', 1);
 					break;	
 				}
-				case ImagesCollageEvent.IMAGE_NONE:
+				case ImageEvent.IMAGE_NONE:
 				{
 					toolsView.setProperty(ToolsView.BTN_DELETE_IMAGE, 'enabled', false);
 					toolsView.setProperty(ToolsView.BTN_DELETE_IMAGE, 'alpha', 0.5);
@@ -75,17 +75,17 @@ package imagescollage.view
 			{
 				case ToolsView.BTN_ADD_IMAGE: 
 				{
-					eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_ADD));
+					eventDispatcher.dispatchEvent(new ImageEvent(ImageEvent.IMAGE_ADD));
 					break;
 				} 
 				case ToolsView.BTN_DELETE_IMAGE: 
 				{
-					eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_DELETE));
+					eventDispatcher.dispatchEvent(new ImageEvent(ImageEvent.IMAGE_DELETE));
 					break;
 				}
 				case ToolsView.BTN_SAVE_IMAGE: 
 				{
-					eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_SAVE));
+					eventDispatcher.dispatchEvent(new ImageEvent(ImageEvent.IMAGE_SAVE));
 					break;
 				}
 			}

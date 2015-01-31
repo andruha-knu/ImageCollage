@@ -1,6 +1,6 @@
 package imagescollage.controller 
 {
-	import imagescollage.event.ImagesCollageEvent;
+	import imagescollage.event.ImageEvent;
 	import flash.display.Bitmap;
 	import flash.display.Loader;
 	import flash.display.Sprite;
@@ -89,7 +89,7 @@ package imagescollage.controller
 			var sprite:Sprite = new Sprite();
 			sprite.addChild(loadedBitmap);
    
-			eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_ADD_COMPLETE, sprite));
+			eventDispatcher.dispatchEvent(new ImageEvent(ImageEvent.IMAGE_ADD_COMPLETE, sprite));
 		}
 		
 		/**
@@ -98,7 +98,7 @@ package imagescollage.controller
 		 */ 
 		private function cancelHandler(event:* = null):void 
 		{
-			eventDispatcher.dispatchEvent(new ImagesCollageEvent(ImagesCollageEvent.IMAGE_ADD_CANCEL));
+			eventDispatcher.dispatchEvent(new ImageEvent(ImageEvent.IMAGE_ADD_CANCEL));
 		}
 				
 	}

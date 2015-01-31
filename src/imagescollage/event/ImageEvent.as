@@ -6,10 +6,8 @@ package imagescollage.event
 	 * Main event of application.
 	 * @author Andriy
 	 */	
-	public class ImagesCollageEvent extends Event
-	{
-		public static const MAIN_VIEW_CREATED_COMPLETE:String = "mainViewCreatedComplete";
-		
+	public class ImageEvent extends Event
+	{		
 		public static const IMAGE_ADD:String = "imageAdd";
 		public static const IMAGE_ADD_COMPLETE:String = "imageAddComplete";
 		public static const IMAGE_ADD_CANCEL:String = "imageAddCancel";
@@ -25,7 +23,7 @@ package imagescollage.event
 		
 		private var _data:*;
 		
-		public function ImagesCollageEvent(type:String, data:* = null):void
+		public function ImageEvent(type:String, data:* = null):void
 		{
 			super(type);
 			_data = data;
